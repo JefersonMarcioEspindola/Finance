@@ -1,0 +1,295 @@
+/* Global =====*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    font-size: 93.75%; 
+}
+
+body {
+    background: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0,);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.container {
+    width: min(90vw, 800px);
+    margin: auto;
+}
+
+/* titles =====*/
+
+h2 {
+    margin-top: 3.2rem;
+    margin-bottom: 0.8rem;
+    color: rgb(56, 56, 118);
+
+    font-weight: normal;
+
+}
+
+/* Links & Buttons =====*/
+a {
+    color: rgb(0, 100, 255);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+a:hover {
+    color: rgb(185, 100, 255);
+}
+button {
+    width: 100%;
+    height: 50px;
+
+    border-color: rgb(0, 100, 255);
+
+    color: rgb(0, 100, 255);
+    background: var(0,100,255);
+
+    padding: 0;
+
+    border-radius: 0.25rem;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background:rgba(0, 102, 255, 0.2);
+}
+
+.button.new {
+    display: inline-block;
+    margin-bottom: .8rem;
+}
+
+.button.cancel {
+    color: var(--red);
+    border: 2px var(--red) solid;
+    border-radius: 0.25rem;
+
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0.6;
+}
+
+.button.cancel:hover {
+    opacity: 1;
+}
+
+/* header =====*/
+
+header {
+    background: rgb(0, 90, 225);
+    padding: 3rem 6rem 7rem 6rem;
+    text-align: center;
+}
+
+#logo {
+    color:rgb(255, 255, 255);
+    font-weight: 700;
+    
+}
+
+/* Balance =====*/
+
+#balance {
+    margin-top: -4rem;
+}
+
+#balance h2 {
+    color:rgb(240, 240, 240)
+
+}
+
+/* Cards =====*/
+
+.card{
+    background: rgb(238, 238, 238);
+    padding: 1.5rem 2rem;
+    border-radius: 0.75rem;
+
+    margin-bottom: 1.25rem;
+}
+
+.card h3 {
+    font-weight: normal;
+    font-size: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card p {
+    font-size: 2rem;
+    line-height: 3rem;
+
+    margin-top: 0.5rem;
+}
+
+.card.total {
+    background: rgb(0, 102, 255);
+    color: rgb(255, 255, 255);
+    
+}
+
+/* Table =====*/
+#transaction {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+
+#data-table {
+    width: 100%;
+    border-spacing: 0rem 0.5rem;
+    color: rgb(150, 156, 179);
+    
+    overflow-x: auto;
+
+}
+
+table td {
+    background: rgb(232, 232, 232);
+    opacity: 0.;
+    color: black;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-weight: 800;
+}
+
+td.descripton {
+    color: black;
+} 
+td.income {
+    color:rgb(0, 190, 0)
+}
+td.expense {
+    color: rgb(255, 0, 0);
+}
+table tr {
+    opacity: 0.85;
+}
+table tr:hover {
+    opacity: 1;
+}
+
+table th {
+    background: rgb(0, 100, 255);
+    padding: 1rem 1.5rem;
+  
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    text-align: center;
+
+}
+
+table thead th:first-child,
+table tbody td:first-child {
+    border-radius: 0.75rem 0 0 0.75rem;
+}
+
+table thead th:last-child,
+table tbody td:last-child {
+    border-radius: 0 0.75rem 0.75rem 0;
+}
+/* Modal ======*/
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+  
+    background-color: rgba(0, 0, 0 ,0.5);
+
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+.modal-overlay.active {
+    opacity: 0;
+    visibility: visible;
+}
+
+.modal {
+    background: rgb(255, 255, 255);
+    padding: 2.4rem;
+    
+
+}
+
+/* form ======*/
+#form {
+    max-width: 500px;
+}
+
+#form h2 {
+    margin-top: 0;
+    color: rgb(0 100 255);
+}
+
+input {
+    border-radius: 0.2rem;
+
+    padding: 0.8rem;
+
+    width: 100%;
+}
+
+.input-group {
+    margin-top: 0.6rem;
+}
+
+.input-group .help{
+    opacity: 0.4;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.input-group.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-group.actions .button,
+.input-group.actions button {
+    width: 48%;
+}
+
+/* Footer ======*/
+footer {
+    text-align:  center;
+    color: rgb(0 100 255);
+    padding: 4rem 0 2rem;
+    font-weight: 900;
+}
+
+/* Responsive ======*/
+
